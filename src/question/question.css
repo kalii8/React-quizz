@@ -54,5 +54,24 @@ button:hover {
 
 .select {
     opacity: 1;
-    
+}
+
+.answer {
+    border: 1px solid black;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+}
+
+.correct {
+    background-color: green;
+}
+
+.incorrect  {
+    background-color: red;
+}
+
+button[disabled] {
+    background-color: gray;
+    opacity: 0.5;
 }

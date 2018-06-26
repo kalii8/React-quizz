@@ -18,6 +18,12 @@ export default class Question extends React.Component {
         let noClass = 'no';
         if(this.state.answer === 'no')
                 noClass += ' select';
+
+        let result ='answer';
+        if(this.props.answer === this.state.answer)
+            result += ' correct'
+        else if (this.state.answer !== 'none')
+            result += ' incorrect';
         
         return (
             <div>
@@ -26,14 +32,20 @@ export default class Question extends React.Component {
                     <div className="question">{this.props.question}</div>
                 </div>
                     <div className="buttons">
-                        <button className={yesClass} onClick={this.answer_yes.bind(this)}>YES</button>
-                        <button className={noClass} onClick={this.answer_no.bind(this)}>NO</button>
+                        <button className={yesClass} onClick={this.answer_yes.bind(this)} disabled={this.is_answered()} >YES</button>
+                        <button className={noClass} onClick={this.answer_no.bind(this)} disabled={this.is_answered()}>NO</button>
+                        <div className={result}></div>
                     </div>
             </div>
         );
     }
 
+    is_answered(){
+        return this.state.answer !== 'none';
+    }
+
     answer_yes(){
+
         this.setState({
             answer: 'yes'
         });
