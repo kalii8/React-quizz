@@ -1,0 +1,58 @@
+.question {
+    font-family: sans-serif;
+    font-size: 2rem;
+    flex-basis: 1;
+}
+
+.question-number {
+    width: 2rem;
+    height: 2rem;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: baseline;
+}
+
+.whole-question {
+    display: flex;
+}
+
+.buttons {
+    display: flex;
+    align-content: space-between ;
+     
+}
+
+.yes {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin: 0.5rem 2rem;
+    opacity: 0.5;
+    width: 5rem;
+    height: 2rem;
+}
+
+.no {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin: 0.5rem 2rem;
+    opacity: 0.5;
+    width: 5rem;
+    height: 2rem;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.select {
+    opacity: 1;
+    
+}
